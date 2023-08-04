@@ -1,0 +1,42 @@
+:root {
+  --color-primary: #454545;
+  --color-primary-focus: #4f4re4;
+  --color-secondary: #0d121f;
+  --color-accent-focus: #7164F2;
+}
+
+.dark {
+  --color-primary: #f3f3f3
+  --color-primary-focus: #f4f4f4;
+  --color-secondary: #8d99b6;
+  --color-accent-focus: #aea9eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  @apply max-w-7xl 2xl:max-w-screen-2xl mx-auto px-3 sm:px-6 lg:px-8
+}
+/* Dark Mode Button */
+.darkmode-toggle svg {
+  @apply origin-top animate-[linear_darkmode-btn_200ms_forwards];
+}
+
+.darkmode-toggle svg.darkmode-moon {
+  @apply hidden dark:block;
+}
+
+.darkmode-toggle svg.darkmode-sun {
+  @apply block dark:hidden;
+}
+
+@keyframes darkmode-btn {
+  from {
+    transform: scale(0.75);
+  }
+  to {
+    transform: scale(1);
+  }
+}
